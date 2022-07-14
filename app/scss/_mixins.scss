@@ -1,0 +1,30 @@
+@mixin clamp($row) {
+  -webkit-line-clamp: $row;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50, -50%);
+}
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 30px;
+}
